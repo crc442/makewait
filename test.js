@@ -10,7 +10,6 @@ const fetchSomethingElse = () => new Promise((resolve) => {
 
 // ============
 
-
 function* aGen4 () {
 	const result = yield fetchSomething();
 	console.log("In generator..", result);
@@ -50,7 +49,6 @@ function* aGen3 () {
 }
 
 // const asyncFunc = gsync(aGen3);
-
 
 asyncFunc.then(
 	result => {
