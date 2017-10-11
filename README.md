@@ -7,25 +7,25 @@
 - With async/await
 ```javascript
 function async myAsyncFun () {
-	const something = await fetchSomething();
-	const somethingElse = await fetchSomethingElse();
-	return something * somethingElse;
+  const something = await fetchSomething();
+  const somethingElse = await fetchSomethingElse();
+  return something * somethingElse;
 }
 
 // then
 myAsyncFun.then(
-	result => {
-		console.log(result);
-	}
+  result => {
+    console.log(result);
+  }
 );
 ```
 
 - With `makewait`
 ```javascript
 function* myGeneratorFun () {
-	const something = yield fetchSomething();
-	const somethingElse = yield fetchSomethingElse();
-	return something * somethingElse;
+  const something = yield fetchSomething();
+  const somethingElse = yield fetchSomethingElse();
+  return something * somethingElse;
 }
 
 // make it async
@@ -33,9 +33,9 @@ const myAsyncFun = makewait(myGeneratorFun);
 
 // then
 myAsyncFun.then(
-	result => {
-		console.log(result);
-	}
+  result => {
+    console.log(result);
+  }
 );
 ```
 
