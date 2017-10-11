@@ -1,11 +1,11 @@
 {
-  "name": "gsync",
+  "name": "makewait",
   "version": "1.0.0",
   "description": "async/await with generators",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crc442/gsync.git"
+    "url": "git+https://github.com/crc442/makewait.git"
   },
   "author": "Chirag Chauhan <crc442@nyu.edu>",
   "license": "MIT",

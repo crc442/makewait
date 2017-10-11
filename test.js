@@ -1,4 +1,4 @@
-const gsync = require('./index');
+const makewait = require('./index');
 
 const fetchSomething = () => new Promise((resolve) => {
   setTimeout(() => resolve(1), 500);
@@ -18,7 +18,7 @@ function* aGen4 () {
 	return result1 * 4;
 }
 
-const asyncFunc = gsync(aGen4);
+const asyncFunc = makewait(aGen4);
 
 function* aGen () {
 	const result = yield fetchSomething();
@@ -28,7 +28,7 @@ function* aGen () {
 	return r;
 }
 
-// const asyncFunc = gsync(aGen);
+// const asyncFunc = makewait(aGen);
 
 function* aGen1 () {
 	const result = yield fetchSomething();
@@ -36,19 +36,19 @@ function* aGen1 () {
 	return result;
 }
 
-// const asyncFunc = gsync(aGen1);
+// const asyncFunc = makewait(aGen1);
 
 function* aGen2 () {
 	return fetchSomething();
 }
 
-// const asyncFunc = gsync(aGen2);
+// const asyncFunc = makewait(aGen2);
 
 function* aGen3 () {
 	yield fetchSomething();
 }
 
-// const asyncFunc = gsync(aGen3);
+// const asyncFunc = makewait(aGen3);
 
 asyncFunc.then(
 	result => {

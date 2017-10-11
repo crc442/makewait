@@ -22,11 +22,11 @@ const gennext = (gen, cb, prev = undefined) => {
 	}
 }
 
-function gsync(func) {
+function makewait(func) {
 	return new Promise(resolve => {
 		return gennext(func(), val => resolve(val));
 	});
 }
 
-module.exports = gsync;
+module.exports = makewait;
 
